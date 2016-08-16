@@ -48,6 +48,11 @@
     [self initCamera:cameraString.intValue];
     [self.tabBarController.tabBar setUserInteractionEnabled:NO];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        _outletTapGesture.enabled = NO;
+        [self.tabBarController.tabBar setHidden:NO];
+        return;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -148,6 +153,11 @@
 
 - (IBAction)actionOneTap:(id)sender {
     //just invert the flag
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        _outletTapGesture.enabled = NO;
+        [self.tabBarController.tabBar setHidden:NO];
+        return;
+    }
     UIInterfaceOrientation interfaceOrientation = self.interfaceOrientation;
     if (interfaceOrientation != UIDeviceOrientationPortrait && interfaceOrientation != UIDeviceOrientationPortraitUpsideDown) {
         _outletTapGesture.enabled = NO;
@@ -189,7 +199,10 @@
                     [_outletVersionLabel setHidden:YES];
                 }
                 [_outletExpandButton setImage:[UIImage imageNamed:@"shrink"] forState:UIControlStateNormal];
-                self.view.backgroundColor = [UIColor blackColor];
+                if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+                    self.view.backgroundColor = [UIColor blackColor];
+                    [self.tabBarController.tabBar setHidden:NO];
+                }
                 isFullScreen = YES;
             }
             break;
@@ -200,7 +213,10 @@
                     [_outletVersionLabel setHidden:YES];
                 }
                 [_outletExpandButton setImage:[UIImage imageNamed:@"shrink"] forState:UIControlStateNormal];
-                self.view.backgroundColor = [UIColor blackColor];
+                if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+                    self.view.backgroundColor = [UIColor blackColor];
+                    [self.tabBarController.tabBar setHidden:NO];
+                }
                 isFullScreen = YES;
             }
             break;
@@ -240,7 +256,7 @@
     }
 //    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
 
-//    [self determineResolution];
+    [self determineResolution];
 //    _video.outputWidth = _outletLiveView.bounds.size.width;
 //    _video.outputHeight = _outletLiveView.bounds.size.height;
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -257,16 +273,17 @@
 - (void)determineResolution{
     float ratio = 1.33f;
     float viewWidth = _outletLiveView.frame.size.width;
-    float viewHeight = _outletLiveView.frame.size.width / ratio;
-//    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
+    float viewHeight = _outletLiveView.frame.size.height;
+    float ratioY = viewHeight;
+//    NSLog(@"%f, %f, %d, %d", viewWidth, viewHeight, _video.outputWidth, _video.outputHeight);
     if (resolution.intValue > 2) {
         ratio = 1.67f;
-        viewHeight = _outletLiveView.frame.size.width / ratio;
+        viewHeight = viewWidth / ratio;
+        ratioY /= viewHeight;
     }
-    if (self.view.frame.size.height <= _outletLiveView.frame.size.height) {
-        viewWidth = viewHeight * ratio;
-    }
-    [_outletLiveView setFrame:CGRectMake(_outletLiveView.frame.origin.x, _outletLiveView.frame.origin.y, viewWidth, viewHeight)];
+    _outletLiveView.transformScaleY(ratioY);
+//    NSLog(@"ratio Y: %.0f", ratioY);
+//    [_outletLiveView setFrame:CGRectMake(_outletLiveView.frame.origin.x, _outletLiveView.frame.origin.y, viewWidth, viewHeight)];
     _video.outputWidth = (int) _outletLiveView.frame.size.width;
     _video.outputHeight = (int) _outletLiveView.frame.size.height;
 }
