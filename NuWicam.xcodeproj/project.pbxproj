@@ -45,6 +45,7 @@
 		56468CEF1D6C4D2E00268070 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56468CEE1D6C4D2E00268070 /* GoogleService-Info.plist */; };
 		564B2BE01D123A4B005B7C20 /* ModbusControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2BDF1D123A4B005B7C20 /* ModbusControl.m */; };
 		565C25D41D420B7500F9EE53 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 565C25D31D420B7500F9EE53 /* Constants.m */; };
+		56842B741D6EDA86002CD283 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560112B31CA3EBB000ABB3CE /* VideoToolbox.framework */; };
 		568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568CF8C81CAB7DB700A58490 /* libc++.tbd */; };
 		56955CEC1CC222530028E78C /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEA1CC222530028E78C /* Default-568h.png */; };
 		56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEB1CC222530028E78C /* Default-568h@2x.png */; };
@@ -163,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56842B741D6EDA86002CD283 /* VideoToolbox.framework in Frameworks */,
 				568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */,
 				56E40E181C996CBD00DDB8A6 /* libavcodec.a in Frameworks */,
 				56E40E191C996CBD00DDB8A6 /* libavdevice.a in Frameworks */,

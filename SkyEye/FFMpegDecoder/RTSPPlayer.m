@@ -171,7 +171,7 @@ initError:
 	sws_freeContext(img_convert_ctx);	
 	
 	// Allocate RGB picture
-	avpicture_alloc(&picture, PIX_FMT_RGB24, outputWidth, outputHeight);
+	avpicture_alloc(&picture, AV_PIX_FMT_RGB24, outputWidth, outputHeight);
 	
 	// Setup scaler
 	static int sws_flags =  SWS_FAST_BILINEAR;
@@ -180,7 +180,7 @@ initError:
 									 pCodecCtx->pix_fmt,
 									 outputWidth, 
 									 outputHeight,
-									 PIX_FMT_RGB24,
+									 AV_PIX_FMT_RGB24,
 									 sws_flags, NULL, NULL, NULL);
 	
 }
