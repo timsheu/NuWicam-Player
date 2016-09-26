@@ -71,8 +71,8 @@
     dotTimer = nil;
     [checkTimer invalidate];
     checkTimer = nil;
-    [_video closeAudio];
-    _video = nil;
+//    [_video closeAudio];
+//    _video = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
     [outletBuffering stopAnimating];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -242,32 +242,32 @@
 
 
 -(void)displayLiveNextFrame:(NSTimer *)timer {
-    _outletSeekSlider.value = 1;
-    if (![_video stepFrame]) {
-        [timer invalidate];
-        [dotTimer invalidate];
-        [_outletPlayButton setEnabled:YES];
-        [_video closeAudio];
-        return;
-    }
-    if (checkTimer != nil) {
-        [checkTimer invalidate];
-        checkTimer = nil;
-    }
+//    _outletSeekSlider.value = 1;
+//    if (![_video stepFrame]) {
+//        [timer invalidate];
+//        [dotTimer invalidate];
+//        [_outletPlayButton setEnabled:YES];
+//        [_video closeAudio];
+//        return;
+//    }
+//    if (checkTimer != nil) {
+//        [checkTimer invalidate];
+//        checkTimer = nil;
+//    }
 //    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
 
-    [self determineResolution];
+//    [self determineResolution];
 //    _video.outputWidth = _outletLiveView.bounds.size.width;
 //    _video.outputHeight = _outletLiveView.bounds.size.height;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _outletLiveView.backgroundColor = [UIColor colorWithPatternImage:_video.currentImage];
-        [_outletPlayButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
-        isPlaying = YES;
-        [outletBuffering stopAnimating];
-        _outletSeekSlider.value = _outletSeekSlider.maximumValue;
-        _outletPlayButton.enabled = YES;
-        [outletBuffering stopAnimating];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        _outletLiveView.backgroundColor = [UIColor colorWithPatternImage:_video.currentImage];
+//        [_outletPlayButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+//        isPlaying = YES;
+//        [outletBuffering stopAnimating];
+//        _outletSeekSlider.value = _outletSeekSlider.maximumValue;
+//        _outletPlayButton.enabled = YES;
+//        [outletBuffering stopAnimating];
+//    });
 }
 
 - (void)determineResolution{
@@ -284,8 +284,8 @@
     _outletLiveView.transformScaleY(ratioY);
 //    NSLog(@"ratio Y: %.0f", ratioY);
 //    [_outletLiveView setFrame:CGRectMake(_outletLiveView.frame.origin.x, _outletLiveView.frame.origin.y, viewWidth, viewHeight)];
-    _video.outputWidth = (int) _outletLiveView.frame.size.width;
-    _video.outputHeight = (int) _outletLiveView.frame.size.height;
+//    _video.outputWidth = (int) _outletLiveView.frame.size.width;
+//    _video.outputHeight = (int) _outletLiveView.frame.size.height;
 }
 
 - (void)initCamera:(int)cameraSerial{
@@ -299,7 +299,12 @@
     @try {
         [checkTimer invalidate];
         checkTimer = nil;
-        [self playVideoViewWithPath:targetURL seekTime:0];
+        NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+        parameters[KxMovieParameterDisableDeinterlacing] = @(YES);
+        KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:@"rtsp://192.168.100.1/cam1/h264" parameters:parameters];
+//        KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:@"rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov" parameters:parameters];
+        [self presentViewController:vc animated:YES completion:nil];
+//        [self playVideoViewWithPath:targetURL seekTime:0];
     }
     @catch (NSException *exception) {
         DDLogDebug(@"set data source failed");
@@ -343,7 +348,7 @@
     [_outletPlayButton setEnabled:NO];
     [_outletSeekSlider setEnabled:NO];
     [playTimer invalidate];
-    _video = nil;
+//    _video = nil;
     localPath = path;
     localTime = time;
     [self isDeviceAlive];
@@ -357,8 +362,8 @@
 }
 
 - (void)stopVideo{
-    [_video closeAudio];
-    _video = nil;
+//    [_video closeAudio];
+//    _video = nil;
     [playTimer invalidate];
     playTimer = nil;
     [dotTimer invalidate];
@@ -384,20 +389,20 @@
     [checkTimer invalidate];
     checkTimer = nil;
     BOOL useTCPFlag = NO;
-    _video = [[RTSPPlayer alloc] initWithVideo:localPath usesTcp:useTCPFlag];
-    if (_video == nil) {
-        [self stopVideo];
-        return;
-    }
-    _video.outputWidth = _outletLiveView.bounds.size.width;
-    _video.outputHeight = _outletLiveView.bounds.size.height;
+//    _video = [[RTSPPlayer alloc] initWithVideo:localPath usesTcp:useTCPFlag];
+//    if (_video == nil) {
+//        [self stopVideo];
+//        return;
+//    }
+//    _video.outputWidth = _outletLiveView.bounds.size.width;
+//    _video.outputHeight = _outletLiveView.bounds.size.height;
     
     lastFrameTime = -1;
     
     // seek to 0.0 seconds
-    [_video seekTime:localTime];
+//    [_video seekTime:localTime];
     _outletSeekSlider.value = 0;
-    _outletSeekSlider.maximumValue = _video.duration;
+//    _outletSeekSlider.maximumValue = _video.duration;
     _outletSeekSlider.minimumValue = 0;
     
     isPlaying = YES;
