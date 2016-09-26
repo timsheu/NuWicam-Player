@@ -13,10 +13,7 @@
 #import "MultipleSettingTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ModbusControl.h"
-
-#ifdef USE_DFU_RTSP_PLAYER
-#import "RTSPPlayer.h"
-#endif
+#import "KxMovieViewController.h"
 
 
 #define TAG_OF_GESTURE 100;
@@ -58,7 +55,7 @@
 
 //outlet variables
 @property (weak, nonatomic) IBOutlet UILabel *outletTemperature;
-@property (strong, nonatomic) RTSPPlayer *video;
+//@property (strong, nonatomic) RTSPPlayer *video;
 @property (weak, nonatomic) IBOutlet UILabel *outletFPSLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *outletRedDot;
 @property (weak, nonatomic) IBOutlet UIView *outletLiveView;
