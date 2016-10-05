@@ -51,6 +51,7 @@
 		56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEB1CC222530028E78C /* Default-568h@2x.png */; };
 		569FAB191CEC44F100D1E547 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FAB181CEC44F100D1E547 /* SettingViewController.m */; };
 		56E40E171C996CAA00DDB8A6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E161C996CAA00DDB8A6 /* liblzma.tbd */; };
+		A845C41D1DA4994600880753 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845C41C1DA4994600880753 /* StartViewController.swift */; };
 		A89775041D94D97D0008600B /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E21D94D97D0008600B /* libavcodec.a */; };
 		A89775051D94D97D0008600B /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E31D94D97D0008600B /* libavdevice.a */; };
 		A89775061D94D97D0008600B /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E41D94D97D0008600B /* libavfilter.a */; };
@@ -156,6 +157,7 @@
 		56E40E161C996CAA00DDB8A6 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
 		710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A845C41C1DA4994600880753 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		A897745C1D94D8070008600B /* NuWicam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuWicam-Prefix.pch"; sourceTree = "<group>"; };
 		A897747E1D94D97D0008600B /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		A897747F1D94D97D0008600B /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				563928061C92B48600717A2A /* LiveViewController.m */,
 				564B2BDE1D123A4B005B7C20 /* ModbusControl.h */,
 				564B2BDF1D123A4B005B7C20 /* ModbusControl.m */,
+				A845C41C1DA4994600880753 /* StartViewController.swift */,
 			);
 			name = "SkyEye ViewController Group";
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 				A897750E1D94D97D0008600B /* KxMovieGLView.m in Sources */,
 				A897750D1D94D97D0008600B /* KxMovieDecoder.m in Sources */,
 				563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */,
+				A845C41D1DA4994600880753 /* StartViewController.swift in Sources */,
 				563927BB1C92B33900717A2A /* PlayerManager.m in Sources */,
 				A897750F1D94D97D0008600B /* KxMovieViewController.m in Sources */,
 				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
