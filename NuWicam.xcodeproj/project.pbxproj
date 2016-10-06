@@ -52,6 +52,8 @@
 		569FAB191CEC44F100D1E547 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FAB181CEC44F100D1E547 /* SettingViewController.m */; };
 		56E40E171C996CAA00DDB8A6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E161C996CAA00DDB8A6 /* liblzma.tbd */; };
 		A845C41D1DA4994600880753 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845C41C1DA4994600880753 /* StartViewController.swift */; };
+		A845C4221DA4CA6700880753 /* ModBusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A845C4201DA4CA6700880753 /* ModBusTableViewCell.xib */; };
+		A845C4291DA4F3D800880753 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A845C4271DA4F3D800880753 /* CustomTableViewCell.m */; };
 		A89775041D94D97D0008600B /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E21D94D97D0008600B /* libavcodec.a */; };
 		A89775051D94D97D0008600B /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E31D94D97D0008600B /* libavdevice.a */; };
 		A89775061D94D97D0008600B /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89774E41D94D97D0008600B /* libavfilter.a */; };
@@ -158,6 +160,9 @@
 		710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A845C41C1DA4994600880753 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A845C4201DA4CA6700880753 /* ModBusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModBusTableViewCell.xib; sourceTree = "<group>"; };
+		A845C4261DA4F3D800880753 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		A845C4271DA4F3D800880753 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		A897745C1D94D8070008600B /* NuWicam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuWicam-Prefix.pch"; sourceTree = "<group>"; };
 		A897747E1D94D97D0008600B /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		A897747F1D94D97D0008600B /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
@@ -399,6 +404,9 @@
 				561E84291C4C848A00B62BCF /* Supporting Files */,
 				561E84371C4C848A00B62BCF /* LaunchScreen.storyboard */,
 				561E843A1C4C848A00B62BCF /* Info.plist */,
+				A845C4261DA4F3D800880753 /* CustomTableViewCell.h */,
+				A845C4271DA4F3D800880753 /* CustomTableViewCell.m */,
+				A845C4201DA4CA6700880753 /* ModBusTableViewCell.xib */,
 			);
 			path = SkyEye;
 			sourceTree = "<group>";
@@ -831,6 +839,7 @@
 				56468CEF1D6C4D2E00268070 /* GoogleService-Info.plist in Resources */,
 				563927B41C92B2C500717A2A /* SettingsPropertyList.plist in Resources */,
 				561E84391C4C848A00B62BCF /* LaunchScreen.storyboard in Resources */,
+				A845C4221DA4CA6700880753 /* ModBusTableViewCell.xib in Resources */,
 				563927B51C92B2C500717A2A /* SystemCommandPropertyList.plist in Resources */,
 				563927AC1C92B2C500717A2A /* ConfigCommandPropertyList.plist in Resources */,
 				A897750C1D94D97D0008600B /* kxmovie.bundle in Resources */,
@@ -927,6 +936,7 @@
 				563927BB1C92B33900717A2A /* PlayerManager.m in Sources */,
 				A897750F1D94D97D0008600B /* KxMovieViewController.m in Sources */,
 				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
+				A845C4291DA4F3D800880753 /* CustomTableViewCell.m in Sources */,
 				563928091C92B48600717A2A /* LiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
