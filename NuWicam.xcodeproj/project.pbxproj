@@ -41,7 +41,6 @@
 		563927EB1C92B41500717A2A /* SkyEyeCommandGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E61C92B41500717A2A /* SkyEyeCommandGenerator.m */; };
 		563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E81C92B41500717A2A /* SkyEyeCommandParser.m */; };
 		563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */; };
-		563928091C92B48600717A2A /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563928061C92B48600717A2A /* LiveViewController.m */; };
 		56468CEF1D6C4D2E00268070 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56468CEE1D6C4D2E00268070 /* GoogleService-Info.plist */; };
 		564B2BE01D123A4B005B7C20 /* ModbusControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2BDF1D123A4B005B7C20 /* ModbusControl.m */; };
 		565C25D41D420B7500F9EE53 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 565C25D31D420B7500F9EE53 /* Constants.m */; };
@@ -136,8 +135,6 @@
 		563927E81C92B41500717A2A /* SkyEyeCommandParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkyEyeCommandParser.m; path = "SyEye Prototype And Delegate/Command Generator/SkyEyeCommandParser.m"; sourceTree = "<group>"; };
 		563927EF1C92B46D00717A2A /* MultipleSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipleSettingTableViewController.h; path = "SkyEye ViewController Group/SettingControllers/MultipleSettingTableViewController.h"; sourceTree = "<group>"; };
 		563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MultipleSettingTableViewController.m; path = "SkyEye ViewController Group/SettingControllers/MultipleSettingTableViewController.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		563928051C92B48600717A2A /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveViewController.h; path = "SkyEye ViewController Group/LiveViewController.h"; sourceTree = "<group>"; };
-		563928061C92B48600717A2A /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LiveViewController.m; path = "SkyEye ViewController Group/LiveViewController.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5639280B1C92B5DC00717A2A /* SkyEye-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyEye-Bridging-Header.h"; sourceTree = "<group>"; };
 		56468CEE1D6C4D2E00268070 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		564B2BDE1D123A4B005B7C20 /* ModbusControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModbusControl.h; path = "SkyEye ViewController Group/ModbusControl.h"; sourceTree = "<group>"; };
@@ -453,8 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				569C53F61C801D990072D81B /* SettingControllers */,
-				563928051C92B48600717A2A /* LiveViewController.h */,
-				563928061C92B48600717A2A /* LiveViewController.m */,
 				564B2BDE1D123A4B005B7C20 /* ModbusControl.h */,
 				564B2BDF1D123A4B005B7C20 /* ModbusControl.m */,
 				A845C41C1DA4994600880753 /* StartViewController.swift */,
@@ -731,12 +726,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 561E84531C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEye" */;
 			buildPhases = (
-				91CF84C90B043EA219FACBE0 /* 📦 Check Pods Manifest.lock */,
+				91CF84C90B043EA219FACBE0 /* [CP] Check Pods Manifest.lock */,
 				561E84221C4C848A00B62BCF /* Sources */,
 				561E84231C4C848A00B62BCF /* Frameworks */,
 				561E84241C4C848A00B62BCF /* Resources */,
-				58C13EA5D6267D16B18C6273 /* 📦 Embed Pods Frameworks */,
-				32425B3DAEDF05152471E396 /* 📦 Copy Pods Resources */,
+				58C13EA5D6267D16B18C6273 /* [CP] Embed Pods Frameworks */,
+				32425B3DAEDF05152471E396 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -866,14 +861,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32425B3DAEDF05152471E396 /* 📦 Copy Pods Resources */ = {
+		32425B3DAEDF05152471E396 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -881,14 +876,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58C13EA5D6267D16B18C6273 /* 📦 Embed Pods Frameworks */ = {
+		58C13EA5D6267D16B18C6273 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,14 +891,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91CF84C90B043EA219FACBE0 /* 📦 Check Pods Manifest.lock */ = {
+		91CF84C90B043EA219FACBE0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -937,7 +932,6 @@
 				A897750F1D94D97D0008600B /* KxMovieViewController.m in Sources */,
 				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
 				A845C4291DA4F3D800880753 /* CustomTableViewCell.m in Sources */,
-				563928091C92B48600717A2A /* LiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

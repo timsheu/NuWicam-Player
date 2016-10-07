@@ -7,8 +7,6 @@ target "SkyEye" do
 	pod 'ObjectiveLibModbus', '~> 0.0'
     pod 'KSCrash', '~> 1.6'
     pod 'CocoaLumberjack'
-	pod 'Firebase/Core'
-	pod 'Firebase/Messaging'
 end
 
 post_install do |installer_representation|

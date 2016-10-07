@@ -14,7 +14,7 @@
 #import <KSCrash/KSCrashInstallationEmail.h>
 #import <KSCrash/KSCrashInstallationVictory.h>
 #import "PlayerManager.h"
-@import Firebase;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

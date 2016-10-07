@@ -241,16 +241,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-xS-dnT">
-                                <rect key="frame" x="240" y="435" width="120" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Xau-rW-pkk"/>
-                                    <constraint firstAttribute="width" constant="120" id="b6F-Fj-xMe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJV-2p-1XY">
                                 <rect key="frame" x="175" y="220" width="250" height="160"/>
                                 <subviews>
@@ -352,17 +342,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cfr-xS-dnT" firstAttribute="centerX" secondItem="a13-fe-beI" secondAttribute="centerX" id="B1H-R8-j9M"/>
-                            <constraint firstItem="cfr-xS-dnT" firstAttribute="centerY" secondItem="a13-fe-beI" secondAttribute="centerY" multiplier="1.5" id="gbf-tH-I2B"/>
                             <constraint firstItem="YJV-2p-1XY" firstAttribute="centerX" secondItem="a13-fe-beI" secondAttribute="centerX" id="j1E-Rb-cnp"/>
                             <constraint firstItem="YJV-2p-1XY" firstAttribute="centerY" secondItem="a13-fe-beI" secondAttribute="centerY" id="r6i-Ad-c7E"/>
-                            <constraint firstItem="cfr-xS-dnT" firstAttribute="top" secondItem="YJV-2p-1XY" secondAttribute="bottom" constant="83" id="zU5-wy-krk"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="zU5-wy-krk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="NuWicam Player" id="0hR-Cb-kLt"/>
                 </viewController>

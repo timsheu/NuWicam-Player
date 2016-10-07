@@ -22,7 +22,7 @@
                             <constraint firstAttribute="width" constant="33" id="FYP-HU-PZM"/>
                             <constraint firstAttribute="height" constant="32" id="vXq-Zg-NNE"/>
                         </constraints>
-                        <state key="normal" title="Button" image="flashOff"/>
+                        <state key="normal" title="Button" image="lightOff"/>
                         <connections>
                             <action selector="click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DjN-ka-Lwr"/>
                         </connections>
@@ -33,7 +33,7 @@
                             <constraint firstAttribute="width" constant="33" id="l25-Nh-cdO"/>
                             <constraint firstAttribute="height" constant="32" id="uUZ-Co-f7N"/>
                         </constraints>
-                        <state key="normal" title="Button" image="flashOff"/>
+                        <state key="normal" title="Button" image="lightOff"/>
                         <connections>
                             <action selector="click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cHj-SW-vYn"/>
                         </connections>
@@ -66,7 +66,7 @@
                             <constraint firstAttribute="width" constant="33" id="EkX-da-2fR"/>
                             <constraint firstAttribute="height" constant="32" id="Nhy-3y-9bX"/>
                         </constraints>
-                        <state key="normal" title="Button" image="lightOff"/>
+                        <state key="normal" title="Button" image="flashOff"/>
                         <connections>
                             <action selector="click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="skq-7U-Bfr"/>
                         </connections>
@@ -77,7 +77,7 @@
                             <constraint firstAttribute="width" constant="33" id="N8D-Cb-DA4"/>
                             <constraint firstAttribute="height" constant="32" id="c8v-W8-yHC"/>
                         </constraints>
-                        <state key="normal" title="Button" image="lightOff"/>
+                        <state key="normal" title="Button" image="flashOff"/>
                         <connections>
                             <action selector="click:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="N0y-Pj-0ws"/>
                         </connections>
