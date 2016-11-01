@@ -35,8 +35,8 @@ class StartViewController: UIViewController {
         if cameraURL != nil {
             let parameters: NSMutableDictionary = NSMutableDictionary.init(capacity: 1)
             parameters[KxMovieParameterDisableDeinterlacing] = true
-            let kxmovie = KxMovieViewController.movieViewControllerWithContentPath(cameraURL, parameters: parameters as [NSObject : AnyObject])
-            presentViewController(kxmovie as! KxMovieViewController, animated: true, completion: nil)
+            let kxmovie = KxMovieViewController.movieViewController(withContentPath: cameraURL, parameters: parameters as [AnyHashable: Any])
+            present(kxmovie as! KxMovieViewController, animated: true, completion: nil)
         }
     }
     

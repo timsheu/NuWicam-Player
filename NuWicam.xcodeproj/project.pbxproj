@@ -793,13 +793,17 @@
 					561E84251C4C848A00B62BCF = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = XZ7PL3RVBP;
+						LastSwiftMigration = 0810;
 					};
 					561E843E1C4C848A00B62BCF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XZ7PL3RVBP;
+						LastSwiftMigration = 0810;
 						TestTargetID = 561E84251C4C848A00B62BCF;
 					};
 					561E84491C4C848A00B62BCF = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 						TestTargetID = 561E84251C4C848A00B62BCF;
 					};
 				};
@@ -1111,6 +1115,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SkyEye/SkyEye-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1158,6 +1163,7 @@
 				PRODUCT_NAME = NuWicam;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SkyEye/SkyEye-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1167,24 +1173,30 @@
 		561E84571C4C848A00B62BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
 				INFOPLIST_FILE = SkyEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEye.app/SkyEye";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuWicam.app/NuWicam";
 			};
 			name = Debug;
 		};
 		561E84581C4C848A00B62BCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
 				INFOPLIST_FILE = SkyEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEye.app/SkyEye";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuWicam.app/NuWicam";
 			};
 			name = Release;
 		};
@@ -1195,6 +1207,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SkyEye;
 				USES_XCTRUNNER = YES;
 			};
@@ -1207,6 +1220,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SkyEye;
 				USES_XCTRUNNER = YES;
 			};
